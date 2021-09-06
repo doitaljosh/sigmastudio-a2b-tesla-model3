@@ -6,7 +6,7 @@ and its licensors.
 * @file: adi_a2b_busconfig.c
 * @brief: This file contains A2B Schematic information
 * @version: $Revision$
-* @date: Monday, September 6, 2021-3:34:56 AM
+* @date: Sunday, September 5, 2021-11:52:35 PM
 * BCF Version - 1.0.0
 * A2B DLL version- 19.3.0
 * A2B Stack DLL version- 19.3.0.0
@@ -607,7 +607,7 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode0=
 	.nSrcNodeID			= 0x0u ,
 
 	/*! Transceiver part number */
-	.ePartNum			= ADI_A2B_AD2422 ,
+	.ePartNum			= ADI_A2B_AD2402 ,
 
 	/* Auto-configure Node Enabled */
 	.bEnableAutoConfig			= DISABLED ,
@@ -618,10 +618,10 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode0=
 		.nVendorID			= 0xADu ,
 
 		/*! Silicon version  */
-		.nVersionID			= 0x2u ,
+		.nVersionID			= 0x21u ,
 
 		/*! PRODUCT ID -AD2410 */
-		.nProductID			= 0x22u ,
+		.nProductID			= 0x10u ,
 
 		/*! Expected capablity - I2C */
 		.nCapability		= 0x1u ,
@@ -645,8 +645,8 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode0=
 		/*! Use High Pass Filter  */
 		.bHPFUse		= ENABLED ,
 
-		/*! PDM rate  */
-		.nPDMRate		= A2B_PDM_RATE_SFF ,
+		/*! Filter Cut-off frequency  */
+		.nHPFCutOff		= A2B_59_9 ,
 
 	},
 
@@ -676,31 +676,6 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode0=
 		/*! Pass down slots */
 		.nPassDwnSlots		= 0x8u ,
 
-		/*! Number of slots for contribution */
-		.nSlotsforDwnstrmContribute		= 0x0u ,
-
-		/*! Number of Upslots consumed */
-		.nLocalUpSlotsConsume		= 0x0u ,
-
-		/*! Array of downstream  masks */ 
-		.anUpstreamConsumeSlots = { SLOT_0_DISABLED, SLOT_1_DISABLED, SLOT_2_DISABLED, SLOT_3_DISABLED, SLOT_4_DISABLED, SLOT_5_DISABLED, SLOT_6_DISABLED, SLOT_7_DISABLED, 
- 									 SLOT_8_DISABLED, SLOT_9_DISABLED, SLOT_10_DISABLED, SLOT_11_DISABLED, SLOT_12_DISABLED, SLOT_13_DISABLED, SLOT_14_DISABLED, SLOT_15_DISABLED, 
- 									 SLOT_16_DISABLED, SLOT_17_DISABLED, SLOT_18_DISABLED, SLOT_19_DISABLED, SLOT_20_DISABLED, SLOT_21_DISABLED, SLOT_22_DISABLED, SLOT_23_DISABLED, 
- 									 SLOT_24_DISABLED, SLOT_25_DISABLED, SLOT_26_DISABLED, SLOT_27_DISABLED, SLOT_28_DISABLED, SLOT_29_DISABLED, SLOT_30_DISABLED, SLOT_31_DISABLED},
-		/*! Offset from the RX Buffer for downstream contribution */
-		.nOffsetDwnstrmContribute		= 0x0u ,
-
-		/*! Enable Down slot consume through mask */
-		.bUseDwnslotConsumeMasks		= ENABLED ,
-
-		/*! Array of downstream  masks */ 
-		.anDwnstreamConsumeSlots = { SLOT_0_DISABLED, SLOT_1_DISABLED, SLOT_2_DISABLED, SLOT_3_DISABLED, SLOT_4_DISABLED, SLOT_5_DISABLED, SLOT_6_DISABLED, SLOT_7_DISABLED, 
- 									 SLOT_8_DISABLED, SLOT_9_DISABLED, SLOT_10_DISABLED, SLOT_11_DISABLED, SLOT_12_DISABLED, SLOT_13_DISABLED, SLOT_14_DISABLED, SLOT_15_DISABLED, 
- 									 SLOT_16_DISABLED, SLOT_17_DISABLED, SLOT_18_DISABLED, SLOT_19_DISABLED, SLOT_20_DISABLED, SLOT_21_DISABLED, SLOT_22_DISABLED, SLOT_23_DISABLED, 
- 									 SLOT_24_DISABLED, SLOT_25_DISABLED, SLOT_26_DISABLED, SLOT_27_DISABLED, SLOT_28_DISABLED, SLOT_29_DISABLED, SLOT_30_DISABLED, SLOT_31_DISABLED},
-		/*! Offset from the RX Buffer for Upstream contribution*/
-		.nOffsetUpstrmContribute		= 0x0u ,
-
 	},
 	.sGPIOSettings =
 	{
@@ -713,7 +688,7 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode0=
 			.bGPIO1PinUsage	= A2B_GPIO_1_DISABLE ,
 
 			/*! GPIO 2 Pin multiplexing */
-			.bGPIO2PinUsage	= A2B_GPIO_2_AS_CLKOUT ,
+			.bGPIO2PinUsage	= A2B_GPIO_2_DISABLE ,
 
 			/*! GPIO 3 Pin multiplexing */
 			.bGPIO3PinUsage	= A2B_GPIO_3_DISABLE ,
@@ -727,8 +702,6 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode0=
 			/*! GPIO 6 Pin multiplexing */
 			.bGPIO6PinUsage	= A2B_GPIO_6_DISABLE ,
 
-			/*! GPIO 7 Pin multiplexing */
-			.bGPIO7PinUsage	= A2B_GPIO_7_DISABLE ,
 		},
 		.sPinIntConfig =
 		{
@@ -774,12 +747,6 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode0=
 			/*! Interrupt polarity - GPIO 6 Input pin  */
 			.bGPIO6IntPolarity	= RAISING_EDGE ,
 
-			/*! Enable GPIO 7 Input pin interrupt  */
-			.bGPIO7Interrupt	= DISABLED ,
-
-			/*! Interrupt polarity - GPIO 7 Input pin  */
-			.bGPIO7IntPolarity	= RAISING_EDGE ,
-
 		},
 		.sOutPinVal =
 		{
@@ -804,19 +771,10 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode0=
 			/*! Data value for GPIO 6 output pin  */
 			.bGPIO6Val = A2B_LOW ,
 
-			/*! Data value for GPIO 7 output pin  */
-			.bGPIO7Val = A2B_LOW ,
-
 		},
 
 		/*! Digital Pin drive strength */
 		.bHighDriveStrength = ENABLED ,
-
-		/*! IRQ Pin Invert */
-		.bIRQInv = DISABLED ,
-
-		/*! Enable tristate when inactive */
-		.bIRQTriState = DISABLED ,
 
 	},
 
@@ -843,9 +801,6 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode0=
 		/*! Report SRF miss error  */
 		.bReportSRFMissErr	= DISABLED ,
 
-		/*! Report SRF crc error  */
-		.bReportSRFCrcErr		= DISABLED ,
-
 		/*! Report GPIO  0 Interrupt */
 		.bReportGPIO0			= DISABLED ,
 
@@ -867,140 +822,8 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode0=
 		/*! Report GPIO  6 Interrupt */
 		.bReportGPIO6			= DISABLED ,
 
-		/*! Report GPIO  7 Interrupt */
-		.bReportGPIO7			= DISABLED ,
-
 	},
 
-	.sGPIODSettings =
-	{
-		.sGPIOD0Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-		.sGPIOD1Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-		.sGPIOD2Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-		.sGPIOD3Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-		.sGPIOD4Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-		.sGPIOD5Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-		.sGPIOD6Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-		.sGPIOD7Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-	},
-
-	.sClkOutSettings =
-	{
-		/*! Enable Clock1 inversion */
-		.bClk1Inv			= DISABLED ,
-
-		/*! Clk1 pre-division */
-		.bClk1PreDiv		= A2B_CLKOUT_PREDIV_02,
-
-		/*! Clk1 division */
-		.bClk1Div			= A2B_CLKOUT_DIV_2,
-
-		/*! Enable Clock2 inversion */
-		.bClk2Inv			= DISABLED ,
-
-		/*! Clk2 pre-division */
-		.bClk2PreDiv		= A2B_CLKOUT_PREDIV_02,
-
-		/*! Clk2 division */
-		.bClk2Div			= A2B_CLKOUT_DIV_4,
-
-	},
 	.sRegSettings =
 	{
 		/*! Switch control register */
@@ -1023,15 +846,6 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode0=
 
 		/*! Bus monitor configuration */
 		.nBMMCFG		= 0x0u ,
-
-		/*! Clock sustain configuration   */
-		.nSUSCFG	= 0x0u ,
-
-		/*!  Mailbox 0 control */
-		.nMBOX0CTL		= 0x0u ,
-
-		/*!  Mailbox 1 control */
-		.nMBOX1CTL		= 0x0u ,
 
 	},
 
@@ -1059,7 +873,7 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode1=
 	.nSrcNodeID			= 0x0u ,
 
 	/*! Transceiver part number */
-	.ePartNum			= ADI_A2B_AD2428 ,
+	.ePartNum			= ADI_A2B_AD2410 ,
 
 	/* Auto-configure Node Enabled */
 	.bEnableAutoConfig			= DISABLED ,
@@ -1070,10 +884,10 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode1=
 		.nVendorID			= 0xADu ,
 
 		/*! Silicon version  */
-		.nVersionID			= 0x0u ,
+		.nVersionID			= 0x21u ,
 
 		/*! PRODUCT ID -AD2410 */
-		.nProductID			= 0x28u ,
+		.nProductID			= 0x10u ,
 
 		/*! Expected capablity - I2C */
 		.nCapability		= 0x1u ,
@@ -1089,7 +903,7 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode1=
 	.sI2SSettings =
 	{
 		/*! TDM mode  */
-		.nTDMMode		= A2B_TDM2 ,
+		.nTDMMode		= A2B_TDM8 ,
 
 		/*! TDM channel size  */
 		.nTDMChSize			= A2B_32BIT_TDM ,
@@ -1102,9 +916,6 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode1=
 
 		/*! Early frame sync status */
 		.bEarlySync			= DISABLED ,
-
-		/*! Serial RX on DTX1 Pin */
-		.bSerialRxOnDTx1			= DISABLED ,
 
 		/*! SYNC offset with Super frame */
 		.nSyncOffset		= 0x0 ,
@@ -1129,22 +940,10 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode1=
 			/*! Reduce / re-transmit higher frequency samples  */
 		.bReduce			= DISABLED ,
 
-			/*! Share A2B bus slots for reduced sampling */
-			.bShareBusSlot	= DISABLED ,
-
-			/*! Enable Valid RR bit in Extra bit */
-			.bRRValidBitLSB 	= DISABLED ,
-
-			/*! Enable Valid RR bit in Extra Channel */
-			.bRRValidBitExtraBit	= DISABLED ,
-
-			/*! Enable Reduced rate strobe in ADR1/IO1 */
-			.bRRStrobe	= DISABLED ,
-
-			/*! Strobe direction High or Low */
-			.bRRStrobeDirection	= A2B_LOW ,
-
 		},
+		/*! Codec clock rate  */
+		.nCodecClkRate		= A2B_CODEC_CLK_12_288MHz ,
+
 	},
 
 	.sPDMSettings =
@@ -1158,30 +957,15 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode1=
 		/*! Use High Pass Filter  */
 		.bHPFUse		= DISABLED ,
 
-		/*! PDM rate  */
-		.nPDMRate		= A2B_PDM_RATE_SFF ,
-
-		/*! PDM Inverted Version of Alternate Clock */
-		.bPDMInvClk		= DISABLED ,
-
-		/*! PDM Alternate Clock */
-		.bPDMAltClk		= DISABLED ,
-
-		/*! PDM0 Falling Edge First */
-		.bPDM0FallingEdgeFrst		= DISABLED ,
-
-		/*! PDM1 Falling Edge First */
-		.bPDM1FallingEdgeFrst		= DISABLED ,
-
-		/*! PDM Destination */
-		.ePDMDestination		= A2B_BUS_ONLY ,
+		/*! Filter Cut-off frequency  */
+		.nHPFCutOff		= A2B_59_9 ,
 
 	},
 
 	.sConfigCtrlSettings =
 	{
 		/*! I2C interface frequency */
-		.nI2CFrequency		= A2B_I2C_100kHz ,
+		.nI2CFrequency		= A2B_I2C_400kHz ,
 
 		/*! Response cycles  */
 		.nRespCycle			= 0x8Bu ,
@@ -1204,44 +988,19 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode1=
 		/*! Pass down slots */
 		.nPassDwnSlots		= 0x0u ,
 
-		/*! Number of slots for contribution */
-		.nSlotsforDwnstrmContribute		= 0x0u ,
-
-		/*! Number of Upslots consumed */
-		.nLocalUpSlotsConsume		= 0x0u ,
-
-		/*! Array of downstream  masks */ 
-		.anUpstreamConsumeSlots = { SLOT_0_DISABLED, SLOT_1_DISABLED, SLOT_2_DISABLED, SLOT_3_DISABLED, SLOT_4_DISABLED, SLOT_5_DISABLED, SLOT_6_DISABLED, SLOT_7_DISABLED, 
- 									 SLOT_8_DISABLED, SLOT_9_DISABLED, SLOT_10_DISABLED, SLOT_11_DISABLED, SLOT_12_DISABLED, SLOT_13_DISABLED, SLOT_14_DISABLED, SLOT_15_DISABLED, 
- 									 SLOT_16_DISABLED, SLOT_17_DISABLED, SLOT_18_DISABLED, SLOT_19_DISABLED, SLOT_20_DISABLED, SLOT_21_DISABLED, SLOT_22_DISABLED, SLOT_23_DISABLED, 
- 									 SLOT_24_DISABLED, SLOT_25_DISABLED, SLOT_26_DISABLED, SLOT_27_DISABLED, SLOT_28_DISABLED, SLOT_29_DISABLED, SLOT_30_DISABLED, SLOT_31_DISABLED},
-		/*! Offset from the RX Buffer for downstream contribution */
-		.nOffsetDwnstrmContribute		= 0x0u ,
-
-		/*! Enable Down slot consume through mask */
-		.bUseDwnslotConsumeMasks		= ENABLED ,
-
-		/*! Array of downstream  masks */ 
-		.anDwnstreamConsumeSlots = { SLOT_0_ENABLED, SLOT_1_ENABLED, SLOT_2_ENABLED, SLOT_3_ENABLED, SLOT_4_ENABLED, SLOT_5_ENABLED, SLOT_6_ENABLED, SLOT_7_ENABLED, 
- 									 SLOT_8_DISABLED, SLOT_9_DISABLED, SLOT_10_DISABLED, SLOT_11_DISABLED, SLOT_12_DISABLED, SLOT_13_DISABLED, SLOT_14_DISABLED, SLOT_15_DISABLED, 
- 									 SLOT_16_DISABLED, SLOT_17_DISABLED, SLOT_18_DISABLED, SLOT_19_DISABLED, SLOT_20_DISABLED, SLOT_21_DISABLED, SLOT_22_DISABLED, SLOT_23_DISABLED, 
- 									 SLOT_24_DISABLED, SLOT_25_DISABLED, SLOT_26_DISABLED, SLOT_27_DISABLED, SLOT_28_DISABLED, SLOT_29_DISABLED, SLOT_30_DISABLED, SLOT_31_DISABLED},
-		/*! Offset from the RX Buffer for Upstream contribution*/
-		.nOffsetUpstrmContribute		= 0x0u ,
-
 	},
 	.sGPIOSettings =
 	{
 		.sPinMuxSettings =
 		{
 			/*! GPIO 0 Pin multiplexing */
-			.bGPIO0PinUsage	= A2B_GPIO_0_DISABLE ,
+			.bGPIO0PinUsage	= A2B_GPIO_0_OUTPUT ,
 
 			/*! GPIO 1 Pin multiplexing */
-			.bGPIO1PinUsage	= A2B_GPIO_1_DISABLE ,
+			.bGPIO1PinUsage	= A2B_GPIO_1_OUTPUT ,
 
 			/*! GPIO 2 Pin multiplexing */
-			.bGPIO2PinUsage	= A2B_GPIO_2_AS_CLKOUT ,
+			.bGPIO2PinUsage	= A2B_GPIO_2_OUTPUT ,
 
 			/*! GPIO 3 Pin multiplexing */
 			.bGPIO3PinUsage	= A2B_GPIO_3_AS_DTX0 ,
@@ -1253,10 +1012,8 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode1=
 			.bGPIO5PinUsage	= A2B_GPIO_5_DISABLE ,
 
 			/*! GPIO 6 Pin multiplexing */
-			.bGPIO6PinUsage	= A2B_GPIO_6_DISABLE ,
+			.bGPIO6PinUsage	= A2B_GPIO_6_OUTPUT ,
 
-			/*! GPIO 7 Pin multiplexing */
-			.bGPIO7PinUsage	= A2B_GPIO_7_DISABLE ,
 		},
 		.sPinIntConfig =
 		{
@@ -1302,12 +1059,6 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode1=
 			/*! Interrupt polarity - GPIO 6 Input pin  */
 			.bGPIO6IntPolarity	= RAISING_EDGE ,
 
-			/*! Enable GPIO 7 Input pin interrupt  */
-			.bGPIO7Interrupt	= DISABLED ,
-
-			/*! Interrupt polarity - GPIO 7 Input pin  */
-			.bGPIO7IntPolarity	= RAISING_EDGE ,
-
 		},
 		.sOutPinVal =
 		{
@@ -1318,7 +1069,7 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode1=
 			.bGPIO1Val = A2B_LOW ,
 
 			/*! Data value for GPIO 2 output pin  */
-			.bGPIO2Val = A2B_LOW ,
+			.bGPIO2Val = A2B_HIGH ,
 
 			/*! Data value for GPIO 3 output pin  */
 			.bGPIO3Val = A2B_LOW ,
@@ -1330,21 +1081,12 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode1=
 			.bGPIO5Val = A2B_LOW ,
 
 			/*! Data value for GPIO 6 output pin  */
-			.bGPIO6Val = A2B_LOW ,
-
-			/*! Data value for GPIO 7 output pin  */
-			.bGPIO7Val = A2B_LOW ,
+			.bGPIO6Val = A2B_HIGH ,
 
 		},
 
 		/*! Digital Pin drive strength */
 		.bHighDriveStrength = ENABLED ,
-
-		/*! IRQ Pin Invert */
-		.bIRQInv = DISABLED ,
-
-		/*! Enable tristate when inactive */
-		.bIRQTriState = DISABLED ,
 
 	},
 
@@ -1371,9 +1113,6 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode1=
 		/*! Report SRF miss error  */
 		.bReportSRFMissErr	= DISABLED ,
 
-		/*! Report SRF crc error  */
-		.bReportSRFCrcErr		= DISABLED ,
-
 		/*! Report GPIO  0 Interrupt */
 		.bReportGPIO0			= DISABLED ,
 
@@ -1395,140 +1134,8 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode1=
 		/*! Report GPIO  6 Interrupt */
 		.bReportGPIO6			= DISABLED ,
 
-		/*! Report GPIO  7 Interrupt */
-		.bReportGPIO7			= DISABLED ,
-
 	},
 
-	.sGPIODSettings =
-	{
-		.sGPIOD0Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-		.sGPIOD1Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-		.sGPIOD2Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-		.sGPIOD3Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-		.sGPIOD4Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-		.sGPIOD5Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-		.sGPIOD6Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-		.sGPIOD7Config =
-		{
-			/*! Enable/Disable GPIO over distance   */
-			.bGPIODistance	= DISABLED ,
-
-			/*! Enable/Disable  */
-			.bGPIOSignalInv	= DISABLED ,
-
-			/*! Bus port masks */ 
-			.abBusPortMask = { A2B_MASK_BUSFLAG_0, A2B_MASK_BUSFLAG_1, A2B_MASK_BUSFLAG_2, A2B_MASK_BUSFLAG_3, A2B_MASK_BUSFLAG_4, A2B_MASK_BUSFLAG_5, A2B_MASK_BUSFLAG_6, A2B_MASK_BUSFLAG_7},
-
-
-		},
-	},
-
-	.sClkOutSettings =
-	{
-		/*! Enable Clock1 inversion */
-		.bClk1Inv			= DISABLED ,
-
-		/*! Clk1 pre-division */
-		.bClk1PreDiv		= A2B_CLKOUT_PREDIV_02,
-
-		/*! Clk1 division */
-		.bClk1Div			= A2B_CLKOUT_DIV_2,
-
-		/*! Enable Clock2 inversion */
-		.bClk2Inv			= DISABLED ,
-
-		/*! Clk2 pre-division */
-		.bClk2PreDiv		= A2B_CLKOUT_PREDIV_02,
-
-		/*! Clk2 division */
-		.bClk2Div			= A2B_CLKOUT_DIV_4,
-
-	},
 	.sRegSettings =
 	{
 		/*! Switch control register */
@@ -1554,27 +1161,6 @@ static ADI_A2B_SLAVE_NCD sChain0_SlaveNode1=
 
 		/*! Bus monitor configuration */
 		.nBMMCFG		= 0x0u ,
-
-		/*! Clock sustain configuration   */
-		.nSUSCFG	= 0x0u ,
-
-		/*!  Mailbox 0 control */
-		.nMBOX0CTL		= 0x0u ,
-
-		/*!  Mailbox 1 control */
-		.nMBOX1CTL		= 0x0u ,
-
-		/*! PLL Control register  */
-		.nPLLCTL	= 0x0u ,
-
-		/*! LVDSA TX Control Register */
-		.nTXACTL	= 0x0u ,
-
-		/*! LVDSB TX Control Register */
-		.nTXBCTL	= 0x0u ,
-
-		/*! Control Register */
-		.nCONTROL	= 0x0u ,
 
 	},
 

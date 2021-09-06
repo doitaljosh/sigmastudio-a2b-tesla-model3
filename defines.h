@@ -1,7 +1,7 @@
 /*
  * File:           defines.h
  *
- * Created:        Monday, September 6, 2021 3:34:34 AM
+ * Created:        Sunday, September 5, 2021 11:51:49 PM
  * Description:    tesla-a2b IC default download data definitions.
  *
  * This software is distributed in the hope that it will be useful,

@@ -6,7 +6,7 @@ and its licensors.
 * @brief: This file contains I2C command sequence to be followed for discovery 
 *         and configuration of A2B nodes for an A2B schematic
 * @version: $Revision$
-* @date: Monday, September 6, 2021-3:35:06 AM
+* @date: Sunday, September 5, 2021-11:52:38 PM
 * I2C Command File Version - 1.0.0
 * A2B DLL version- 19.3.0
 * A2B Stack DLL version- 19.3.0.0
@@ -55,7 +55,7 @@ typedef struct
 #define DELAY   ((unsigned char) 0x02u)
 #define INVALID ((unsigned char) 0xffu)
 
-#define CONFIG_LEN (209) 
+#define CONFIG_LEN (154) 
 
 
 static unsigned char gaConfig_AD242xMasterNode0_CONTROL_Data0[1] =
@@ -133,17 +133,17 @@ static unsigned char gaConfig_AD242xMasterNode0_NODEADR_Data14[1] =
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_VENDOR_Data0[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_VENDOR_Data0[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_PRODUCT_Data1[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_PRODUCT_Data1[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_VERSION_Data2[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_VERSION_Data2[1] =
 {
 	0x00u	
 };
@@ -158,7 +158,7 @@ static unsigned char gaConfig_AD242xMasterNode0_NODEADR_Data16[1] =
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_SWCTL_Data3[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_SWCTL_Data3[1] =
 {
 	0x01u	
 };
@@ -208,7 +208,7 @@ static unsigned char gaConfig_AD242xMasterNode0_NODEADR_Data22[1] =
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_SWCTL_Data4[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_SWCTL_Data4[1] =
 {
 	0x21u	
 };
@@ -218,52 +218,52 @@ static unsigned char gaConfig_AD242xMasterNode0_NODEADR_Data23[1] =
 	0x01u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_BCDNSLOTS_Data3[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_PLLCTL_Data3[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_LDNSLOTS_Data4[1] =
-{
-	0x80u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_LUPSLOTS_Data5[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_BCDNSLOTS_Data4[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_I2CCFG_Data6[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_LDNSLOTS_Data5[1] =
+{
+	0x08u	
+};
+
+static unsigned char gaConfig_TeslaAmpSlaveNode1_LUPSLOTS_Data6[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_SYNCOFFSET_Data7[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_I2SGCFG_Data8[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_I2SCFG_Data9[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_I2CCFG_Data7[1] =
 {
 	0x01u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_I2SRATE_Data10[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_SYNCOFFSET_Data8[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_PDMCTL_Data11[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_I2SGCFG_Data9[1] =
+{
+	0x02u	
+};
+
+static unsigned char gaConfig_TeslaAmpSlaveNode1_I2SCFG_Data10[1] =
+{
+	0x01u	
+};
+
+static unsigned char gaConfig_TeslaAmpSlaveNode1_I2SRATE_Data11[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_PDMCTL2_Data12[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_PDMCTL_Data12[1] =
 {
 	0x00u	
 };
@@ -273,197 +273,57 @@ static unsigned char gaConfig_TeslaAmpSlaveNode1_ERRMGMT_Data13[1] =
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIODAT_Data14[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_CLKCFG_Data14[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIOOEN_Data15[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIODAT_Data15[1] =
+{
+	0x44u	
+};
+
+static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIOOEN_Data16[1] =
+{
+	0x47u	
+};
+
+static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIOIEN_Data17[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIOIEN_Data16[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_PINTEN_Data18[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_PINTEN_Data17[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_PINTINV_Data19[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_PINTINV_Data18[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_PINCFG_Data19[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_PINCFG_Data20[1] =
 {
 	0x01u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_TESTMODE_Data20[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_TESTMODE_Data21[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_CLK1CFG_Data21[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_CLK2CFG_Data22[1] =
-{
-	0x81u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_UPMASK0_Data23[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_UPMASK1_Data24[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_UPMASK2_Data25[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_UPMASK3_Data26[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_UPOFFSET_Data27[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_DNMASK0_Data28[1] =
-{
-	0xFFu	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_DNMASK1_Data29[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_DNMASK2_Data30[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_DNMASK3_Data31[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_DNOFFSET_Data32[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIOD0MSK_Data33[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIOD1MSK_Data34[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIOD2MSK_Data35[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIOD3MSK_Data36[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIOD4MSK_Data37[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIOD5MSK_Data38[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIOD6MSK_Data39[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIOD7MSK_Data40[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIODINV_Data41[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_GPIODEN_Data42[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_MBOX0CTL_Data43[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_MBOX1CTL_Data44[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_SUSCFG_Data45[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_I2SRRSOFFS_Data46[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_I2SRRCTL_Data47[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_TXACTL_Data48[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_TXBCTL_Data49[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_INTMSK0_Data50[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_INTMSK0_Data22[1] =
 {
 	0x10u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_INTMSK1_Data51[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_INTMSK1_Data23[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_BECCTL_Data52[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_BECCTL_Data24[1] =
 {
 	0x00u	
 };
@@ -473,7 +333,7 @@ static unsigned char gaConfig_AD242xMasterNode0_NODEADRSet_Data24[1] =
 	0x01u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_CHIPSet_Data53[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_CHIPSet_Data25[1] =
 {
 	0x6Cu	
 };
@@ -518,7 +378,7 @@ static unsigned char gaConfig_AD242xMasterNode0_NODEADRDisable_Data26[1] =
 	0x01u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_CHIPSet_Data54[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_CHIPSet_Data26[1] =
 {
 	0x6Eu	
 };
@@ -608,7 +468,7 @@ static unsigned char gaConfig_AD242xMasterNode0_NODEADRDisable_Data28[1] =
 	0x01u	
 };
 
-static unsigned char gaConfig_TeslaAmpSlaveNode1_CHIPSet_Data55[1] =
+static unsigned char gaConfig_TeslaAmpSlaveNode1_CHIPSet_Data27[1] =
 {
 	0x70u	
 };
@@ -653,217 +513,92 @@ static unsigned char gaConfig_AD242xMasterNode0_NODEADR_Data31[1] =
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_BCDNSLOTS_Data5[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_PLLCTL_Data5[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_LDNSLOTS_Data6[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_BCDNSLOTS_Data6[1] =
 {
-	0x80u	
+	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_LUPSLOTS_Data7[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_LDNSLOTS_Data7[1] =
+{
+	0x00u	
+};
+
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_LUPSLOTS_Data8[1] =
 {
 	0x03u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_I2CCFG_Data8[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_I2CCFG_Data9[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_PDMCTL_Data9[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_PDMCTL_Data10[1] =
 {
 	0x11u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_ERRMGMT_Data10[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_ERRMGMT_Data11[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_GPIODAT_Data11[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_CLKCFG_Data12[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_GPIOOEN_Data12[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_GPIODAT_Data13[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_GPIOIEN_Data13[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_GPIOOEN_Data14[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_PINTEN_Data14[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_GPIOIEN_Data15[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_PINTINV_Data15[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_PINTEN_Data16[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_PINCFG_Data16[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_PINTINV_Data17[1] =
+{
+	0x00u	
+};
+
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_PINCFG_Data18[1] =
 {
 	0x01u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_TESTMODE_Data17[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_TESTMODE_Data19[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_CLK1CFG_Data18[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_CLK2CFG_Data19[1] =
-{
-	0x81u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_UPMASK0_Data20[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_UPMASK1_Data21[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_UPMASK2_Data22[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_UPMASK3_Data23[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_UPOFFSET_Data24[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_DNMASK0_Data25[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_DNMASK1_Data26[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_DNMASK2_Data27[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_DNMASK3_Data28[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_DNOFFSET_Data29[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_GPIOD0MSK_Data30[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_GPIOD1MSK_Data31[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_GPIOD2MSK_Data32[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_GPIOD3MSK_Data33[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_GPIOD4MSK_Data34[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_GPIOD5MSK_Data35[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_GPIOD6MSK_Data36[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_GPIOD7MSK_Data37[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_GPIODINV_Data38[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_GPIODEN_Data39[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_MBOX0CTL_Data40[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_MBOX1CTL_Data41[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_SUSCFG_Data42[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_I2SRRSOFFS_Data43[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_I2SRRCTL_Data44[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_INTMSK0_Data45[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_INTMSK0_Data20[1] =
 {
 	0x10u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_INTMSK1_Data46[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_INTMSK1_Data21[1] =
 {
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_BECCTL_Data47[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_BECCTL_Data22[1] =
 {
 	0x00u	
 };
@@ -1028,12 +763,12 @@ static unsigned char gaConfig_AD242xMasterNode0_NODEADR_Data63[1] =
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_DNSLOTS_Data48[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_DNSLOTS_Data23[1] =
 {
 	0x08u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_UPSLOTS_Data49[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_UPSLOTS_Data24[1] =
 {
 	0x00u	
 };
@@ -1053,7 +788,7 @@ static unsigned char gaConfig_AD242xMasterNode0_NODEADR_Data66[1] =
 	0x00u	
 };
 
-static unsigned char gaConfig_TeslaMicArraySlaveNode0_SWCTL_Data50[1] =
+static unsigned char gaConfig_TeslaOverheadConsoleSlaveNode0_SWCTL_Data25[1] =
 {
 	0x01u	
 };
@@ -1070,35 +805,25 @@ static unsigned char gaConfig_AD242xMasterNode0_PLLCTL_Data68[1] =
 
 static unsigned char gaConfig_AD242xMasterNode0_NODEADR_Data69[1] =
 {
-	0x01u	
-};
-
-static unsigned char gaConfig_TeslaAmpSlaveNode1_PLLCTL_Data56[1] =
-{
 	0x00u	
 };
 
-static unsigned char gaConfig_AD242xMasterNode0_NODEADR_Data70[1] =
-{
-	0x00u	
-};
-
-static unsigned char gaConfig_AD242xMasterNode0_SLOTFMT_Data71[1] =
+static unsigned char gaConfig_AD242xMasterNode0_SLOTFMT_Data70[1] =
 {
 	0x44u	
 };
 
-static unsigned char gaConfig_AD242xMasterNode0_DATCTL_Data72[1] =
+static unsigned char gaConfig_AD242xMasterNode0_DATCTL_Data71[1] =
 {
 	0x03u	
 };
 
-static unsigned char gaConfig_AD242xMasterNode0_I2SRRATE_Data73[1] =
+static unsigned char gaConfig_AD242xMasterNode0_I2SRRATE_Data72[1] =
 {
 	0x01u	
 };
 
-static unsigned char gaConfig_AD242xMasterNode0_CONTROL_Data74[1] =
+static unsigned char gaConfig_AD242xMasterNode0_CONTROL_Data73[1] =
 {
 	0x01u	
 };
@@ -1123,17 +848,17 @@ ADI_A2B_DISCOVERY_CONFIG gaA2BConfig[CONFIG_LEN] =
 	{0x68u,	WRITE,	0x01u,	0x0000001Au,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_INTPND2_Data13[0]},	/* INTPND2 */
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADR_Data14[0]},	/* NODEADR */
 
-	/*-- COMMANDS FOR DEVICE - Tesla Mic Array Slave Node0 --*/
-	{0x69u,	READ,	0x01u,	0x00000002u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_VENDOR_Data0[0]},	/* VENDOR */
-	{0x69u,	READ,	0x01u,	0x00000003u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_PRODUCT_Data1[0]},	/* PRODUCT */
-	{0x69u,	READ,	0x01u,	0x00000004u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_VERSION_Data2[0]},	/* VERSION */
+	/*-- COMMANDS FOR DEVICE - Tesla Overhead Console Slave Node0 --*/
+	{0x69u,	READ,	0x01u,	0x00000002u,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_VENDOR_Data0[0]},	/* VENDOR */
+	{0x69u,	READ,	0x01u,	0x00000003u,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_PRODUCT_Data1[0]},	/* PRODUCT */
+	{0x69u,	READ,	0x01u,	0x00000004u,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_VERSION_Data2[0]},	/* VERSION */
 
 	/*-- COMMANDS FOR DEVICE - AD242x Master Node0 --*/
 	{0x68u,	WRITE,	0x01u,	0x00000009u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_SWCTL_Data15[0]},	/* SWCTL */
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADR_Data16[0]},	/* NODEADR */
 
-	/*-- COMMANDS FOR DEVICE - Tesla Mic Array Slave Node0 --*/
-	{0x69u,	WRITE,	0x01u,	0x00000009u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_SWCTL_Data3[0]},	/* SWCTL */
+	/*-- COMMANDS FOR DEVICE - Tesla Overhead Console Slave Node0 --*/
+	{0x69u,	WRITE,	0x01u,	0x00000009u,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_SWCTL_Data3[0]},	/* SWCTL */
 
 	/*-- COMMANDS FOR DEVICE - AD242x Master Node0 --*/
 	{0x68u,	WRITE,	0x01u,	0x00000013u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_DISCVRY_Data17[0]},	/* DISCVRY */
@@ -1150,69 +875,41 @@ ADI_A2B_DISCOVERY_CONFIG gaA2BConfig[CONFIG_LEN] =
 	/*-- COMMANDS FOR DEVICE - AD242x Master Node0 --*/
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADR_Data22[0]},	/* NODEADR */
 
-	/*-- COMMANDS FOR DEVICE - Tesla Mic Array Slave Node0 --*/
-	{0x69u,	WRITE,	0x01u,	0x00000009u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_SWCTL_Data4[0]},	/* SWCTL */
+	/*-- COMMANDS FOR DEVICE - Tesla Overhead Console Slave Node0 --*/
+	{0x69u,	WRITE,	0x01u,	0x00000009u,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_SWCTL_Data4[0]},	/* SWCTL */
 
 	/*-- COMMANDS FOR DEVICE - AD242x Master Node0 --*/
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADR_Data23[0]},	/* NODEADR */
 
 	/*-- COMMANDS FOR DEVICE - Tesla Amp Slave Node1 --*/
-	{0x69u,	WRITE,	0x01u,	0x0000000Au,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_BCDNSLOTS_Data3[0]},	/* BCDNSLOTS */
-	{0x69u,	WRITE,	0x01u,	0x0000000Bu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_LDNSLOTS_Data4[0]},	/* LDNSLOTS */
-	{0x69u,	WRITE,	0x01u,	0x0000000Cu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_LUPSLOTS_Data5[0]},	/* LUPSLOTS */
-	{0x69u,	WRITE,	0x01u,	0x0000003Fu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_I2CCFG_Data6[0]},	/* I2CCFG */
-	{0x69u,	WRITE,	0x01u,	0x00000046u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_SYNCOFFSET_Data7[0]},	/* SYNCOFFSET */
-	{0x69u,	WRITE,	0x01u,	0x00000041u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_I2SGCFG_Data8[0]},	/* I2SGCFG */
-	{0x69u,	WRITE,	0x01u,	0x00000042u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_I2SCFG_Data9[0]},	/* I2SCFG */
-	{0x69u,	WRITE,	0x01u,	0x00000043u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_I2SRATE_Data10[0]},	/* I2SRATE */
-	{0x69u,	WRITE,	0x01u,	0x00000047u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_PDMCTL_Data11[0]},	/* PDMCTL */
-	{0x69u,	WRITE,	0x01u,	0x0000005Du,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_PDMCTL2_Data12[0]},	/* PDMCTL2 */
+	{0x69u,	WRITE,	0x01u,	0x00000040u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_PLLCTL_Data3[0]},	/* PLLCTL */
+	{0x69u,	WRITE,	0x01u,	0x0000000Au,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_BCDNSLOTS_Data4[0]},	/* BCDNSLOTS */
+	{0x69u,	WRITE,	0x01u,	0x0000000Bu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_LDNSLOTS_Data5[0]},	/* LDNSLOTS */
+	{0x69u,	WRITE,	0x01u,	0x0000000Cu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_LUPSLOTS_Data6[0]},	/* LUPSLOTS */
+	{0x69u,	WRITE,	0x01u,	0x0000003Fu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_I2CCFG_Data7[0]},	/* I2CCFG */
+	{0x69u,	WRITE,	0x01u,	0x00000046u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_SYNCOFFSET_Data8[0]},	/* SYNCOFFSET */
+	{0x69u,	WRITE,	0x01u,	0x00000041u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_I2SGCFG_Data9[0]},	/* I2SGCFG */
+	{0x69u,	WRITE,	0x01u,	0x00000042u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_I2SCFG_Data10[0]},	/* I2SCFG */
+	{0x69u,	WRITE,	0x01u,	0x00000043u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_I2SRATE_Data11[0]},	/* I2SRATE */
+	{0x69u,	WRITE,	0x01u,	0x00000047u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_PDMCTL_Data12[0]},	/* PDMCTL */
 	{0x69u,	WRITE,	0x01u,	0x00000048u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_ERRMGMT_Data13[0]},	/* ERRMGMT */
-	{0x69u,	WRITE,	0x01u,	0x0000004Au,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIODAT_Data14[0]},	/* GPIODAT */
-	{0x69u,	WRITE,	0x01u,	0x0000004Du,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIOOEN_Data15[0]},	/* GPIOOEN */
-	{0x69u,	WRITE,	0x01u,	0x0000004Eu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIOIEN_Data16[0]},	/* GPIOIEN */
-	{0x69u,	WRITE,	0x01u,	0x00000050u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_PINTEN_Data17[0]},	/* PINTEN */
-	{0x69u,	WRITE,	0x01u,	0x00000051u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_PINTINV_Data18[0]},	/* PINTINV */
-	{0x69u,	WRITE,	0x01u,	0x00000052u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_PINCFG_Data19[0]},	/* PINCFG */
-	{0x69u,	WRITE,	0x01u,	0x00000020u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_TESTMODE_Data20[0]},	/* TESTMODE */
-	{0x69u,	WRITE,	0x01u,	0x00000059u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_CLK1CFG_Data21[0]},	/* CLK1CFG */
-	{0x69u,	WRITE,	0x01u,	0x0000005Au,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_CLK2CFG_Data22[0]},	/* CLK2CFG */
-	{0x69u,	WRITE,	0x01u,	0x00000060u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_UPMASK0_Data23[0]},	/* UPMASK0 */
-	{0x69u,	WRITE,	0x01u,	0x00000061u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_UPMASK1_Data24[0]},	/* UPMASK1 */
-	{0x69u,	WRITE,	0x01u,	0x00000062u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_UPMASK2_Data25[0]},	/* UPMASK2 */
-	{0x69u,	WRITE,	0x01u,	0x00000063u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_UPMASK3_Data26[0]},	/* UPMASK3 */
-	{0x69u,	WRITE,	0x01u,	0x00000064u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_UPOFFSET_Data27[0]},	/* UPOFFSET */
-	{0x69u,	WRITE,	0x01u,	0x00000065u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_DNMASK0_Data28[0]},	/* DNMASK0 */
-	{0x69u,	WRITE,	0x01u,	0x00000066u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_DNMASK1_Data29[0]},	/* DNMASK1 */
-	{0x69u,	WRITE,	0x01u,	0x00000067u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_DNMASK2_Data30[0]},	/* DNMASK2 */
-	{0x69u,	WRITE,	0x01u,	0x00000068u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_DNMASK3_Data31[0]},	/* DNMASK3 */
-	{0x69u,	WRITE,	0x01u,	0x00000069u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_DNOFFSET_Data32[0]},	/* DNOFFSET */
-	{0x69u,	WRITE,	0x01u,	0x00000081u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIOD0MSK_Data33[0]},	/* GPIOD0MSK */
-	{0x69u,	WRITE,	0x01u,	0x00000082u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIOD1MSK_Data34[0]},	/* GPIOD1MSK */
-	{0x69u,	WRITE,	0x01u,	0x00000083u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIOD2MSK_Data35[0]},	/* GPIOD2MSK */
-	{0x69u,	WRITE,	0x01u,	0x00000084u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIOD3MSK_Data36[0]},	/* GPIOD3MSK */
-	{0x69u,	WRITE,	0x01u,	0x00000085u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIOD4MSK_Data37[0]},	/* GPIOD4MSK */
-	{0x69u,	WRITE,	0x01u,	0x00000086u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIOD5MSK_Data38[0]},	/* GPIOD5MSK */
-	{0x69u,	WRITE,	0x01u,	0x00000087u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIOD6MSK_Data39[0]},	/* GPIOD6MSK */
-	{0x69u,	WRITE,	0x01u,	0x00000088u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIOD7MSK_Data40[0]},	/* GPIOD7MSK */
-	{0x69u,	WRITE,	0x01u,	0x0000008Au,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIODINV_Data41[0]},	/* GPIODINV */
-	{0x69u,	WRITE,	0x01u,	0x00000080u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIODEN_Data42[0]},	/* GPIODEN */
-	{0x69u,	WRITE,	0x01u,	0x00000090u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_MBOX0CTL_Data43[0]},	/* MBOX0CTL */
-	{0x69u,	WRITE,	0x01u,	0x00000096u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_MBOX1CTL_Data44[0]},	/* MBOX1CTL */
-	{0x69u,	WRITE,	0x01u,	0x0000005Cu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_SUSCFG_Data45[0]},	/* SUSCFG */
-	{0x69u,	WRITE,	0x01u,	0x00000058u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_I2SRRSOFFS_Data46[0]},	/* I2SRRSOFFS */
-	{0x69u,	WRITE,	0x01u,	0x00000057u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_I2SRRCTL_Data47[0]},	/* I2SRRCTL */
-	{0x69u,	WRITE,	0x01u,	0x0000002Eu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_TXACTL_Data48[0]},	/* TXACTL */
-	{0x69u,	WRITE,	0x01u,	0x00000030u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_TXBCTL_Data49[0]},	/* TXBCTL */
-	{0x69u,	WRITE,	0x01u,	0x0000001Bu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_INTMSK0_Data50[0]},	/* INTMSK0 */
-	{0x69u,	WRITE,	0x01u,	0x0000001Cu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_INTMSK1_Data51[0]},	/* INTMSK1 */
-	{0x69u,	WRITE,	0x01u,	0x0000001Eu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_BECCTL_Data52[0]},	/* BECCTL */
+	{0x69u,	WRITE,	0x01u,	0x00000049u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_CLKCFG_Data14[0]},	/* CLKCFG */
+	{0x69u,	WRITE,	0x01u,	0x0000004Au,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIODAT_Data15[0]},	/* GPIODAT */
+	{0x69u,	WRITE,	0x01u,	0x0000004Du,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIOOEN_Data16[0]},	/* GPIOOEN */
+	{0x69u,	WRITE,	0x01u,	0x0000004Eu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_GPIOIEN_Data17[0]},	/* GPIOIEN */
+	{0x69u,	WRITE,	0x01u,	0x00000050u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_PINTEN_Data18[0]},	/* PINTEN */
+	{0x69u,	WRITE,	0x01u,	0x00000051u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_PINTINV_Data19[0]},	/* PINTINV */
+	{0x69u,	WRITE,	0x01u,	0x00000052u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_PINCFG_Data20[0]},	/* PINCFG */
+	{0x69u,	WRITE,	0x01u,	0x00000020u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_TESTMODE_Data21[0]},	/* TESTMODE */
+	{0x69u,	WRITE,	0x01u,	0x0000001Bu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_INTMSK0_Data22[0]},	/* INTMSK0 */
+	{0x69u,	WRITE,	0x01u,	0x0000001Cu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_INTMSK1_Data23[0]},	/* INTMSK1 */
+	{0x69u,	WRITE,	0x01u,	0x0000001Eu,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_BECCTL_Data24[0]},	/* BECCTL */
 
 	/*-- COMMANDS FOR DEVICE - AD242x Master Node0 --*/
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADRSet_Data24[0]},	/* NODEADR - Set the node address */
 
 	/*-- COMMANDS FOR DEVICE - Tesla Amp Slave Node1 --*/
-	{0x69u,	WRITE,	0x01u,	0x00000000u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_CHIPSet_Data53[0]},	/* CHIP - Set the chip address */
+	{0x69u,	WRITE,	0x01u,	0x00000000u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_CHIPSet_Data25[0]},	/* CHIP - Set the chip address */
 
 	/*-- COMMANDS FOR DEVICE - AD242x Master Node0 --*/
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADREnable_Data25[0]},	/* NODEADR - Enable PERI */
@@ -1229,7 +926,7 @@ ADI_A2B_DISCOVERY_CONFIG gaA2BConfig[CONFIG_LEN] =
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADRDisable_Data26[0]},	/* NODEADR - Disable PERI */
 
 	/*-- COMMANDS FOR DEVICE - Tesla Amp Slave Node1 --*/
-	{0x69u,	WRITE,	0x01u,	0x00000000u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_CHIPSet_Data54[0]},	/* CHIP - Set the chip address */
+	{0x69u,	WRITE,	0x01u,	0x00000000u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_CHIPSet_Data26[0]},	/* CHIP - Set the chip address */
 
 	/*-- COMMANDS FOR DEVICE - AD242x Master Node0 --*/
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADREnable_Data27[0]},	/* NODEADR - Enable PERI */
@@ -1255,7 +952,7 @@ ADI_A2B_DISCOVERY_CONFIG gaA2BConfig[CONFIG_LEN] =
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADRDisable_Data28[0]},	/* NODEADR - Disable PERI */
 
 	/*-- COMMANDS FOR DEVICE - Tesla Amp Slave Node1 --*/
-	{0x69u,	WRITE,	0x01u,	0x00000000u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_CHIPSet_Data55[0]},	/* CHIP - Set the chip address */
+	{0x69u,	WRITE,	0x01u,	0x00000000u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_CHIPSet_Data27[0]},	/* CHIP - Set the chip address */
 
 	/*-- COMMANDS FOR DEVICE - AD242x Master Node0 --*/
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADREnable_Data29[0]},	/* NODEADR - Enable PERI */
@@ -1271,50 +968,25 @@ ADI_A2B_DISCOVERY_CONFIG gaA2BConfig[CONFIG_LEN] =
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADRDisable_Data30[0]},	/* NODEADR - Disable PERI */
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADR_Data31[0]},	/* NODEADR */
 
-	/*-- COMMANDS FOR DEVICE - Tesla Mic Array Slave Node0 --*/
-	{0x69u,	WRITE,	0x01u,	0x0000000Au,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_BCDNSLOTS_Data5[0]},	/* BCDNSLOTS */
-	{0x69u,	WRITE,	0x01u,	0x0000000Bu,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_LDNSLOTS_Data6[0]},	/* LDNSLOTS */
-	{0x69u,	WRITE,	0x01u,	0x0000000Cu,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_LUPSLOTS_Data7[0]},	/* LUPSLOTS */
-	{0x69u,	WRITE,	0x01u,	0x0000003Fu,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_I2CCFG_Data8[0]},	/* I2CCFG */
-	{0x69u,	WRITE,	0x01u,	0x00000047u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_PDMCTL_Data9[0]},	/* PDMCTL */
-	{0x69u,	WRITE,	0x01u,	0x00000048u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_ERRMGMT_Data10[0]},	/* ERRMGMT */
-	{0x69u,	WRITE,	0x01u,	0x0000004Au,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_GPIODAT_Data11[0]},	/* GPIODAT */
-	{0x69u,	WRITE,	0x01u,	0x0000004Du,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_GPIOOEN_Data12[0]},	/* GPIOOEN */
-	{0x69u,	WRITE,	0x01u,	0x0000004Eu,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_GPIOIEN_Data13[0]},	/* GPIOIEN */
-	{0x69u,	WRITE,	0x01u,	0x00000050u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_PINTEN_Data14[0]},	/* PINTEN */
-	{0x69u,	WRITE,	0x01u,	0x00000051u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_PINTINV_Data15[0]},	/* PINTINV */
-	{0x69u,	WRITE,	0x01u,	0x00000052u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_PINCFG_Data16[0]},	/* PINCFG */
-	{0x69u,	WRITE,	0x01u,	0x00000020u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_TESTMODE_Data17[0]},	/* TESTMODE */
-	{0x69u,	WRITE,	0x01u,	0x00000059u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_CLK1CFG_Data18[0]},	/* CLK1CFG */
-	{0x69u,	WRITE,	0x01u,	0x0000005Au,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_CLK2CFG_Data19[0]},	/* CLK2CFG */
-	{0x69u,	WRITE,	0x01u,	0x00000060u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_UPMASK0_Data20[0]},	/* UPMASK0 */
-	{0x69u,	WRITE,	0x01u,	0x00000061u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_UPMASK1_Data21[0]},	/* UPMASK1 */
-	{0x69u,	WRITE,	0x01u,	0x00000062u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_UPMASK2_Data22[0]},	/* UPMASK2 */
-	{0x69u,	WRITE,	0x01u,	0x00000063u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_UPMASK3_Data23[0]},	/* UPMASK3 */
-	{0x69u,	WRITE,	0x01u,	0x00000064u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_UPOFFSET_Data24[0]},	/* UPOFFSET */
-	{0x69u,	WRITE,	0x01u,	0x00000065u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_DNMASK0_Data25[0]},	/* DNMASK0 */
-	{0x69u,	WRITE,	0x01u,	0x00000066u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_DNMASK1_Data26[0]},	/* DNMASK1 */
-	{0x69u,	WRITE,	0x01u,	0x00000067u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_DNMASK2_Data27[0]},	/* DNMASK2 */
-	{0x69u,	WRITE,	0x01u,	0x00000068u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_DNMASK3_Data28[0]},	/* DNMASK3 */
-	{0x69u,	WRITE,	0x01u,	0x00000069u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_DNOFFSET_Data29[0]},	/* DNOFFSET */
-	{0x69u,	WRITE,	0x01u,	0x00000081u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_GPIOD0MSK_Data30[0]},	/* GPIOD0MSK */
-	{0x69u,	WRITE,	0x01u,	0x00000082u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_GPIOD1MSK_Data31[0]},	/* GPIOD1MSK */
-	{0x69u,	WRITE,	0x01u,	0x00000083u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_GPIOD2MSK_Data32[0]},	/* GPIOD2MSK */
-	{0x69u,	WRITE,	0x01u,	0x00000084u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_GPIOD3MSK_Data33[0]},	/* GPIOD3MSK */
-	{0x69u,	WRITE,	0x01u,	0x00000085u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_GPIOD4MSK_Data34[0]},	/* GPIOD4MSK */
-	{0x69u,	WRITE,	0x01u,	0x00000086u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_GPIOD5MSK_Data35[0]},	/* GPIOD5MSK */
-	{0x69u,	WRITE,	0x01u,	0x00000087u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_GPIOD6MSK_Data36[0]},	/* GPIOD6MSK */
-	{0x69u,	WRITE,	0x01u,	0x00000088u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_GPIOD7MSK_Data37[0]},	/* GPIOD7MSK */
-	{0x69u,	WRITE,	0x01u,	0x0000008Au,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_GPIODINV_Data38[0]},	/* GPIODINV */
-	{0x69u,	WRITE,	0x01u,	0x00000080u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_GPIODEN_Data39[0]},	/* GPIODEN */
-	{0x69u,	WRITE,	0x01u,	0x00000090u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_MBOX0CTL_Data40[0]},	/* MBOX0CTL */
-	{0x69u,	WRITE,	0x01u,	0x00000096u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_MBOX1CTL_Data41[0]},	/* MBOX1CTL */
-	{0x69u,	WRITE,	0x01u,	0x0000005Cu,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_SUSCFG_Data42[0]},	/* SUSCFG */
-	{0x69u,	WRITE,	0x01u,	0x00000058u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_I2SRRSOFFS_Data43[0]},	/* I2SRRSOFFS */
-	{0x69u,	WRITE,	0x01u,	0x00000057u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_I2SRRCTL_Data44[0]},	/* I2SRRCTL */
-	{0x69u,	WRITE,	0x01u,	0x0000001Bu,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_INTMSK0_Data45[0]},	/* INTMSK0 */
-	{0x69u,	WRITE,	0x01u,	0x0000001Cu,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_INTMSK1_Data46[0]},	/* INTMSK1 */
-	{0x69u,	WRITE,	0x01u,	0x0000001Eu,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_BECCTL_Data47[0]},	/* BECCTL */
+	/*-- COMMANDS FOR DEVICE - Tesla Overhead Console Slave Node0 --*/
+	{0x69u,	WRITE,	0x01u,	0x00000040u,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_PLLCTL_Data5[0]},	/* PLLCTL */
+	{0x69u,	WRITE,	0x01u,	0x0000000Au,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_BCDNSLOTS_Data6[0]},	/* BCDNSLOTS */
+	{0x69u,	WRITE,	0x01u,	0x0000000Bu,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_LDNSLOTS_Data7[0]},	/* LDNSLOTS */
+	{0x69u,	WRITE,	0x01u,	0x0000000Cu,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_LUPSLOTS_Data8[0]},	/* LUPSLOTS */
+	{0x69u,	WRITE,	0x01u,	0x0000003Fu,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_I2CCFG_Data9[0]},	/* I2CCFG */
+	{0x69u,	WRITE,	0x01u,	0x00000047u,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_PDMCTL_Data10[0]},	/* PDMCTL */
+	{0x69u,	WRITE,	0x01u,	0x00000048u,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_ERRMGMT_Data11[0]},	/* ERRMGMT */
+	{0x69u,	WRITE,	0x01u,	0x00000049u,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_CLKCFG_Data12[0]},	/* CLKCFG */
+	{0x69u,	WRITE,	0x01u,	0x0000004Au,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_GPIODAT_Data13[0]},	/* GPIODAT */
+	{0x69u,	WRITE,	0x01u,	0x0000004Du,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_GPIOOEN_Data14[0]},	/* GPIOOEN */
+	{0x69u,	WRITE,	0x01u,	0x0000004Eu,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_GPIOIEN_Data15[0]},	/* GPIOIEN */
+	{0x69u,	WRITE,	0x01u,	0x00000050u,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_PINTEN_Data16[0]},	/* PINTEN */
+	{0x69u,	WRITE,	0x01u,	0x00000051u,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_PINTINV_Data17[0]},	/* PINTINV */
+	{0x69u,	WRITE,	0x01u,	0x00000052u,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_PINCFG_Data18[0]},	/* PINCFG */
+	{0x69u,	WRITE,	0x01u,	0x00000020u,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_TESTMODE_Data19[0]},	/* TESTMODE */
+	{0x69u,	WRITE,	0x01u,	0x0000001Bu,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_INTMSK0_Data20[0]},	/* INTMSK0 */
+	{0x69u,	WRITE,	0x01u,	0x0000001Cu,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_INTMSK1_Data21[0]},	/* INTMSK1 */
+	{0x69u,	WRITE,	0x01u,	0x0000001Eu,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_BECCTL_Data22[0]},	/* BECCTL */
 
 	/*-- COMMANDS FOR DEVICE - AD242x Master Node0 --*/
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADRSet_Data32[0]},	/* NODEADR - Set the node address */
@@ -1350,32 +1022,26 @@ ADI_A2B_DISCOVERY_CONFIG gaA2BConfig[CONFIG_LEN] =
 	{0x68u,	WRITE,	0x01u,	0x0000001Eu,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_BECCTL_Data62[0]},	/* BECCTL */
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADR_Data63[0]},	/* NODEADR */
 
-	/*-- COMMANDS FOR DEVICE - Tesla Mic Array Slave Node0 --*/
-	{0x69u,	WRITE,	0x01u,	0x0000000Du,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_DNSLOTS_Data48[0]},	/* DNSLOTS */
-	{0x69u,	WRITE,	0x01u,	0x0000000Eu,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_UPSLOTS_Data49[0]},	/* UPSLOTS */
+	/*-- COMMANDS FOR DEVICE - Tesla Overhead Console Slave Node0 --*/
+	{0x69u,	WRITE,	0x01u,	0x0000000Du,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_DNSLOTS_Data23[0]},	/* DNSLOTS */
+	{0x69u,	WRITE,	0x01u,	0x0000000Eu,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_UPSLOTS_Data24[0]},	/* UPSLOTS */
 
 	/*-- COMMANDS FOR DEVICE - AD242x Master Node0 --*/
 	{0x68u,	WRITE,	0x01u,	0x0000000Du,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_DNSLOTS_Data64[0]},	/* DNSLOTS */
 	{0x68u,	WRITE,	0x01u,	0x0000000Eu,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_UPSLOTS_Data65[0]},	/* UPSLOTS */
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADR_Data66[0]},	/* NODEADR */
 
-	/*-- COMMANDS FOR DEVICE - Tesla Mic Array Slave Node0 --*/
-	{0x69u,	WRITE,	0x01u,	0x00000009u,	0x01u,	0x0001u,	&gaConfig_TeslaMicArraySlaveNode0_SWCTL_Data50[0]},	/* SWCTL */
+	/*-- COMMANDS FOR DEVICE - Tesla Overhead Console Slave Node0 --*/
+	{0x69u,	WRITE,	0x01u,	0x00000009u,	0x01u,	0x0001u,	&gaConfig_TeslaOverheadConsoleSlaveNode0_SWCTL_Data25[0]},	/* SWCTL */
 
 	/*-- COMMANDS FOR DEVICE - AD242x Master Node0 --*/
 	{0x68u,	WRITE,	0x01u,	0x00000009u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_SWCTL_Data67[0]},	/* SWCTL */
 	{0x68u,	WRITE,	0x01u,	0x00000040u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_PLLCTL_Data68[0]},	/* PLLCTL */
 	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADR_Data69[0]},	/* NODEADR */
-
-	/*-- COMMANDS FOR DEVICE - Tesla Amp Slave Node1 --*/
-	{0x69u,	WRITE,	0x01u,	0x00000040u,	0x01u,	0x0001u,	&gaConfig_TeslaAmpSlaveNode1_PLLCTL_Data56[0]},	/* PLLCTL */
-
-	/*-- COMMANDS FOR DEVICE - AD242x Master Node0 --*/
-	{0x68u,	WRITE,	0x01u,	0x00000001u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_NODEADR_Data70[0]},	/* NODEADR */
-	{0x68u,	WRITE,	0x01u,	0x00000010u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_SLOTFMT_Data71[0]},	/* SLOTFMT */
-	{0x68u,	WRITE,	0x01u,	0x00000011u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_DATCTL_Data72[0]},	/* DATCTL */
-	{0x68u,	WRITE,	0x01u,	0x00000056u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_I2SRRATE_Data73[0]},	/* I2SRRATE */
-	{0x68u,	WRITE,	0x01u,	0x00000012u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_CONTROL_Data74[0]},	/* CONTROL */
+	{0x68u,	WRITE,	0x01u,	0x00000010u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_SLOTFMT_Data70[0]},	/* SLOTFMT */
+	{0x68u,	WRITE,	0x01u,	0x00000011u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_DATCTL_Data71[0]},	/* DATCTL */
+	{0x68u,	WRITE,	0x01u,	0x00000056u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_I2SRRATE_Data72[0]},	/* I2SRRATE */
+	{0x68u,	WRITE,	0x01u,	0x00000012u,	0x01u,	0x0001u,	&gaConfig_AD242xMasterNode0_CONTROL_Data73[0]},	/* CONTROL */
 };
 
 #endif /* _ADI_A2B_I2C_LIST_H_ */
