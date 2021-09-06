@@ -19,7 +19,7 @@
         <Schematic>
             <Algorithm name="a2b_tpnode_algo1" friendlyname="Processor Node " cell="Linux Host " location="{X=33, Y=312} " Growth="0 " GrowthB="0">
                 <Link pin="O_C88_A0_P1_out" dir="out" link="Link11" />
-                <Link pin="O_C88_A0_P1_out" dir="out" link="Link15" />
+                <Link pin="O_C88_A0_P1_out" dir="out" link="Link14" />
             </Algorithm>
             <Algorithm name="a2b_pdnode_ahost_algo1" friendlyname="Audio Host peripheral node " cell="A2B Host " location="{X=33, Y=80} " Growth="0 " GrowthB="0">
                 <Link pin="I_C43_A0_P1_in" dir="in" link="Link11" />
@@ -27,18 +27,16 @@
                 <Link pin="O_C43_A0_P4_out" dir="out" link="Link5" />
             </Algorithm>
             <Algorithm name="ad242x_mnode_algo1" friendlyname="AD242x Master Node " cell="AD242x Master Node0 " location="{X=296, Y=81} " Growth="0 " GrowthB="0">
-                <Link pin="I_C0_A0_P1_in" dir="in" link="Link15" />
+                <Link pin="I_C0_A0_P1_in" dir="in" link="Link14" />
                 <Link pin="I_C0_A0_P2_in" dir="in" link="Link4" />
                 <Link pin="I_C0_A0_P4_in" dir="in" link="Link5" />
                 <Link pin="O_C0_A0_P6_out" dir="out" link="Link12" />
             </Algorithm>
             <Algorithm name="ad242x_snode_algo2" friendlyname="AD242x Slave Node " cell="Tesla Mic Array Slave Node0 " location="{X=299, Y=403} " Growth="0 " GrowthB="0">
                 <Link pin="I_C60_A0_P1_in" dir="in" link="Link12" />
-                <Link pin="O_C60_A0_P2_out" dir="out" link="Link16" />
                 <Link pin="O_C60_A0_P3_out" dir="out" link="Link8" />
                 <Link pin="O_C60_A0_P3_out" dir="out" link="Link9" />
                 <Link pin="O_C60_A0_P3_out" dir="out" link="Link10" />
-                <Link pin="O_C60_A0_P3_out" dir="out" link="Link14" />
                 <Link pin="O_C60_A0_P7_out" dir="out" link="Link13" />
             </Algorithm>
             <Algorithm name="a2b_pdnode_src_algo1" friendlyname="Audio Source peripheral node " cell="Mic0 " location="{X=557, Y=322} " Growth="0 " GrowthB="0">
@@ -58,12 +56,6 @@
                 <Link pin="O_C7_A0_P2_out" dir="out" link="Link3" />
                 <Link pin="O_C7_A0_P5_out" dir="out" link="Link6" />
                 <Link pin="O_C7_A0_P5_out" dir="out" link="Link7" />
-            </Algorithm>
-            <Algorithm name="a2b_pdnode_src_algo4" friendlyname="Audio Source peripheral node " cell="Mic3 " location="{X=557, Y=648} " Growth="0 " GrowthB="0">
-                <Link pin="I_C96_A0_P2_in" dir="in" link="Link14" />
-            </Algorithm>
-            <Algorithm name="a2b_pdnode_i2c_algo3" friendlyname="Generic I2C peripheral node " cell="EEPROM0 " location="{X=568, Y=254} " Growth="0 " GrowthB="0">
-                <Link pin="I_C108_A0_P1_in" dir="in" link="Link16" />
             </Algorithm>
             <Algorithm name="a2b_pdnode_snk_algo1" friendlyname="Audio Sink peripheral node " cell="TDA7802 Amplifier " location="{X=1021, Y=-26} " Growth="0 " GrowthB="0">
                 <Link pin="I_C15_A0_P1_in" dir="in" link="Link0" />
